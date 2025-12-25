@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
@@ -20,11 +21,10 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center" style={{ minHeight: 'calc(100vh - 80px)' }}>
           <div className="text-center max-w-4xl mx-auto py-20">
             <div className="mb-6 inline-block">
-              <div className="text-8xl mb-4 animate-pulse">🦅</div>
-              <h1 className="text-6xl md:text-7xl font-black mb-2 text-white">
-                JAG FC
-              </h1>
-              <p className="text-primary-400 text-xl font-bold tracking-widest">EST. 2024</p>
+              <Image src="/logo.png"
+                          width={120}
+                          height={120} 
+                          alt='JAG FC LOGO'/>
             </div>
             <p className="text-2xl md:text-3xl mb-8 text-white font-bold">
               Where Champions Rise
@@ -288,7 +288,7 @@ export default function HomePage() {
           <p className="text-xl mb-8">Join the elite. Train with champions.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/packages">
-              <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100 font-bold shadow-lg">
+              <Button size="lg" className="bg-white !text-primary-600 hover:bg-gray-100 hover:!text-white font-bold shadow-lg">
                 View Programs
               </Button>
             </Link>

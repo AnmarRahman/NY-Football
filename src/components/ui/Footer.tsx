@@ -1,20 +1,20 @@
+import Image from 'next/image';
 import React from 'react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white mt-20">
+    <footer className="bg-black text-white mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <span className="text-3xl">🦅</span>
-              <h3 className="text-xl font-black text-white">JAG <span className="text-primary-500">FC</span></h3>
-            </div>
+            <Image src="/logo.png"
+                        width={50}
+                        height={50} 
+                        alt='JAG FC LOGO'/>
             <p className="text-gray-400 text-sm">
               Building champions through elite youth soccer training. Where passion meets excellence.
             </p>
-            <p className="text-primary-500 text-sm mt-2 font-semibold">Est. 2024</p>
           </div>
 
           {/* Quick Links */}

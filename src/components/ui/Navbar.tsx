@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useStore } from '@/store/useStore';
 import { MockAuthService } from '@/services/mockAuthService';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export const Navbar: React.FC = () => {
   const { user, logout } = useStore();
@@ -28,16 +29,13 @@ export const Navbar: React.FC = () => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-32">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3" onClick={closeMobileMenu}>
-            <div className="relative w-14 h-14 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center shadow-md">
-              <span className="text-white font-black text-2xl">🦅</span>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-2xl font-black text-gray-900">JAG <span className="text-primary-600">FC</span></h1>
-              <p className="text-xs text-primary-500 font-semibold tracking-wide">EST. 2024</p>
-            </div>
+            <Image src="/logo.png"
+            width={80}
+            height={80} 
+            alt='JAG FC LOGO'/>
           </Link>
 
           {/* Desktop Navigation */}
