@@ -31,6 +31,9 @@ export default function DashboardPage() {
     const currentUser = MockAuthService.getCurrentUser();
     if (!currentUser) {
       router.push('/auth');
+    } else if (currentUser.role === 'admin') {
+      // Redirect admins to admin dashboard
+      router.push('/admin');
     } else {
       setUser(currentUser);
     }
