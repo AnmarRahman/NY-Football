@@ -1,14 +1,15 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useStore } from '@/store/useStore';
 import { MockAuthService } from '@/services/mockAuthService';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 export const Navbar: React.FC = () => {
   const { user, logout } = useStore();
   const router = useRouter();
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleLogout = async () => {
@@ -21,6 +22,9 @@ export const Navbar: React.FC = () => {
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
   };
+
+  const isAdmin = user?.role === 'admin';
+  const dashboardLink = isAdmin ? '/admin' : '/dashboard';
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -48,8 +52,8 @@ export const Navbar: React.FC = () => {
             
             {user ? (
               <>
-                <Link href="/dashboard" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
-                  Dashboard
+                <Link href={dashboardLink} className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+                  {isAdmin ? 'Admin' : 'Dashboard'}
                 </Link>
                 <button
                   onClick={handleLogout}
@@ -111,11 +115,11 @@ export const Navbar: React.FC = () => {
             {user ? (
               <>
                 <Link 
-                  href="/dashboard" 
+                  href={dashboardLink}
                   onClick={closeMobileMenu}
                   className="block text-gray-700 hover:text-primary-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors"
                 >
-                  Dashboard
+                  {isAdmin ? 'Admin Dashboard' : 'Dashboard'}
                 </Link>
                 <button
                   onClick={handleLogout}
