@@ -16,8 +16,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #1a1a1a;
 }
 
 code {
@@ -40,20 +40,4 @@ code {
       transform: translateY(0);
     }
   }
-}
-
-/* Ensure gradient text is visible */
-.bg-clip-text {
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Force dark backgrounds */
-.bg-dark-900 {
-  background-color: #1a1a1a !important;
-}
-
-.bg-dark-800 {
-  background-color: #2d2d2d !important;
 }
