@@ -5,7 +5,7 @@ Production-ready frontend demo for JAG FC, a youth soccer coaching academy. Feat
 
 **Team**: JAG FC - Est. 2024
 **Colors**: Black, Gold, Orange/Red
-**Location**: New York, USA
+**Location**: New Jersey, USA
 
 ### Tech Stack
 - **Framework**: Next.js (React-based)

@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-bold mb-4 text-primary-500">Contact Us</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>📍 New York, NY</li>
+              <li>📍 New Jersey, NY</li>
               <li>📧 info@jagfc.com</li>
               <li>📞 (555) 123-4567</li>
             </ul>

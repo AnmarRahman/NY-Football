@@ -7,8 +7,8 @@ import { Footer } from '@/components/ui/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'NY Future Stars Soccer Academy | Youth Soccer Coaching in New York',
-  description: 'Professional youth soccer coaching in New York for ages 5-16. Develop skills, build confidence, and make lifelong friends.',
+  title: 'NY Future Stars Soccer Academy | Youth Soccer Coaching in New Jersey',
+  description: 'Professional youth soccer coaching in New Jersey for ages 5-16. Develop skills, build confidence, and make lifelong friends.',
 };
 
 export default function RootLayout({

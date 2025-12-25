@@ -11,7 +11,7 @@ export default function HomePage() {
     <div className="animate-fadeIn">
       {/* Hero Section */}
       <section 
-        className="relative bg-cover bg-center text-white" 
+        className="relative bg-cover bg-center text-white " 
         style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=2070&auto=format&fit=crop")',
           minHeight: 'calc(100vh - 80px)'
@@ -20,17 +20,17 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/90 to-gray-800/90"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center" style={{ minHeight: 'calc(100vh - 80px)' }}>
           <div className="text-center max-w-4xl mx-auto py-20">
-            <div className="mb-6 inline-block">
+            {/* <div className="mb-6 inline-block">
               <Image src="/logo.png"
                           width={120}
                           height={120} 
                           alt='JAG FC LOGO'/>
-            </div>
-            <p className="text-2xl md:text-3xl mb-8 text-white font-bold">
+            </div> */}
+            <p className="text-2xl md:text-3xl mb-8 text-white font-bold ">
               Where Champions Rise
             </p>
             <p className="text-xl md:text-2xl mb-10 text-gray-200">
-              Elite Youth Soccer Training in New York
+              Elite Youth Soccer Training in New Jersey
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/packages">
@@ -113,9 +113,9 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="relative overflow-hidden rounded-xl shadow-lg border-2 border-primary-200 hover:border-primary-500 transition-all">
-              <div className="aspect-video bg-gray-200 relative">
+              <div className="aspect-video bg-gray-200 bg-[url('/image1.jpg')] bg-cover relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4">
+                <div className="absolute bottom-0 left-0 right-0 p-4 ">
                   <p className="text-white font-bold text-lg">Indoor Training Excellence</p>
                   <p className="text-primary-300 text-sm">State-of-the-art facilities</p>
                 </div>
@@ -123,7 +123,7 @@ export default function HomePage() {
             </div>
 
             <div className="relative overflow-hidden rounded-xl shadow-lg border-2 border-accent-200 hover:border-accent-500 transition-all">
-              <div className="aspect-video bg-gray-200 relative">
+              <div className="aspect-video bg-gray-200 bg-[url('/image2.jpg')] bg-cover relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <p className="text-white font-bold text-lg">Tournament Champions</p>
@@ -133,7 +133,7 @@ export default function HomePage() {
             </div>
 
             <div className="relative overflow-hidden rounded-xl shadow-lg border-2 border-secondary-200 hover:border-secondary-500 transition-all">
-              <div className="aspect-video bg-gray-200 relative">
+              <div className="aspect-video bg-gray-200 bg-[url('/image3.jpg')] bg-cover relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <p className="text-white font-bold text-lg">Game Day Ready</p>
@@ -284,7 +284,7 @@ export default function HomePage() {
         <Card className="bg-gradient-to-r from-primary-500 to-accent-500 text-white text-center shadow-xl" padding="lg">
           <div className="text-7xl mb-4">🦅</div>
           <h2 className="text-4xl md:text-5xl font-black mb-4">Ready to Rise?</h2>
-          <p className="text-2xl mb-2 font-bold">📍 New York, NY</p>
+          <p className="text-2xl mb-2 font-bold">📍 New Jersey, NY</p>
           <p className="text-xl mb-8">Join the elite. Train with champions.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/packages">
