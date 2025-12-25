@@ -8,14 +8,22 @@ import { Card } from '@/components/ui/Card';
 export default function HomePage() {
   return (
     <div className="animate-fadeIn">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      {/* Hero Section with Background Image */}
+      <section 
+        className="relative bg-cover bg-center text-white" 
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2070&auto=format&fit=crop"),linear-gradient(rgba(37, 99, 235, 0.7), rgba(22, 163, 74, 0.7))',
+          backgroundBlendMode: 'overlay',
+          minHeight: 'calc(100vh - 80px)' // Full height minus navbar
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/60 via-primary-800/50 to-secondary-900/60"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center" style={{ minHeight: 'calc(100vh - 80px)' }}>
+          <div className="text-center max-w-3xl mx-auto py-20">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg">
               Build Champions,<br />One Kick at a Time
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 drop-shadow-md">
               Professional youth soccer coaching in New York for ages 5-16
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -25,7 +33,7 @@ export default function HomePage() {
                 </Button>
               </Link>
               <Link href="/auth">
-                <Button size="lg" variant="outline" className="bg-white text-primary-600 border-white hover:bg-gray-100">
+                <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100 border-2 border-white">
                   Get Started Today
                 </Button>
               </Link>
@@ -204,12 +212,12 @@ export default function HomePage() {
           <p className="text-lg text-blue-100 mb-8">Serving families across all five boroughs</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/packages">
-              <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100">
+              <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100 font-semibold shadow-lg">
                 Explore Packages
               </Button>
             </Link>
             <Link href="/auth">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" className="bg-secondary-600 text-white hover:bg-secondary-700 border-2 border-white font-semibold shadow-lg">
                 Sign Up Now
               </Button>
             </Link>
