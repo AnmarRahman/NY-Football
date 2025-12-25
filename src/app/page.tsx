@@ -30,7 +30,7 @@ export default function HomePage() {
               Where Champions Rise
             </p>
             <p className="text-xl md:text-2xl mb-10 text-gray-200">
-              Elite Youth Soccer Training in New Jersey
+              Elite Youth Soccer Training in Connecticut
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/packages">
@@ -284,7 +284,7 @@ export default function HomePage() {
         <Card className="bg-gradient-to-r from-primary-500 to-accent-500 text-white text-center shadow-xl" padding="lg">
           <div className="text-7xl mb-4">🦅</div>
           <h2 className="text-4xl md:text-5xl font-black mb-4">Ready to Rise?</h2>
-          <p className="text-2xl mb-2 font-bold">📍 New Jersey, NY</p>
+          <p className="text-2xl mb-2 font-bold">📍 Connecticut, NY</p>
           <p className="text-xl mb-8">Join the elite. Train with champions.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/packages">
