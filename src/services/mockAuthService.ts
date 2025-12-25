@@ -13,6 +13,10 @@ import { User, AuthCredentials } from '@/types';
 
 export class MockAuthService {
   private static STORAGE_KEY = 'ny_soccer_user';
+  
+  // Hardcoded admin credentials for demo
+  private static ADMIN_EMAIL = 'admin@nyfuturestars.com';
+  private static ADMIN_PASSWORD = 'admin123';
 
   /**
    * Simulate user signup
@@ -29,6 +33,7 @@ export class MockAuthService {
       childName: credentials.childName,
       childAge: credentials.childAge,
       createdAt: new Date(),
+      role: 'parent',
     };
 
     // Store in localStorage (temporary - will be replaced by Supabase session)
@@ -45,6 +50,19 @@ export class MockAuthService {
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 1000));
 
+    // Check if admin credentials
+    if (credentials.email === this.ADMIN_EMAIL && credentials.password === this.ADMIN_PASSWORD) {
+      const adminUser: User = {
+        id: 'admin_001',
+        email: this.ADMIN_EMAIL,
+        parentName: 'Admin',
+        createdAt: new Date(),
+        role: 'admin',
+      };
+      localStorage.setItem(this.STORAGE_KEY, JSON.stringify(adminUser));
+      return adminUser;
+    }
+
     // Check if user exists in localStorage
     const storedUser = localStorage.getItem(this.STORAGE_KEY);
     
@@ -58,6 +76,7 @@ export class MockAuthService {
       email: credentials.email,
       parentName: credentials.parentName || 'Parent',
       createdAt: new Date(),
+      role: 'parent',
     };
 
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(user));
@@ -88,5 +107,13 @@ export class MockAuthService {
    */
   static isAuthenticated(): boolean {
     return !!this.getCurrentUser();
+  }
+
+  /**
+   * Check if current user is admin
+   */
+  static isAdmin(): boolean {
+    const user = this.getCurrentUser();
+    return user?.role === 'admin';
   }
 }

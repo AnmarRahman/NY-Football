@@ -7,6 +7,7 @@ export interface User {
   childName?: string;
   childAge?: number;
   createdAt: Date;
+  role?: 'parent' | 'admin';
 }
 
 export interface Package {
@@ -39,4 +40,27 @@ export interface AuthCredentials {
   parentName?: string;
   childName?: string;
   childAge?: number;
+}
+
+export interface Subscription {
+  id: string;
+  userId: string;
+  user: User;
+  packageId: string;
+  package: Package;
+  status: 'active' | 'pending' | 'cancelled' | 'expired';
+  startDate: Date;
+  endDate?: Date;
+  transactionId?: string;
+  amount: number;
+}
+
+export interface TrainingSchedule {
+  id: string;
+  packageId: string;
+  dayOfWeek: string;
+  startTime: string;
+  endTime: string;
+  location: string;
+  coachName: string;
 }
