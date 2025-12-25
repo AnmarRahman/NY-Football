@@ -33,7 +33,7 @@ export default function HomePage() {
                 </Button>
               </Link>
               <Link href="/auth">
-                <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100 border-2 border-white">
+                <Button size="lg" className="bg-white !text-primary-600 hover:bg-gray-100 hover:!text-white border-2 border-white">
                   Get Started Today
                 </Button>
               </Link>
@@ -212,7 +212,7 @@ export default function HomePage() {
           <p className="text-lg text-blue-100 mb-8">Serving families across all five boroughs</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/packages">
-              <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100 font-semibold shadow-lg">
+              <Button size="lg" className="bg-white !text-primary-600 hover:bg-gray-100 hover:!text-white font-semibold shadow-lg">
                 Explore Packages
               </Button>
             </Link>
