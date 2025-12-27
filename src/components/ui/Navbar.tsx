@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { useStore } from '@/store/useStore';
-import { MockAuthService } from '@/services/mockAuthService';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
+import React, { useState } from "react";
+import Link from "next/link";
+import { useStore } from "@/store/useStore";
+import { MockAuthService } from "@/services/mockAuthService";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export const Navbar: React.FC = () => {
   const { user, logout } = useStore();
@@ -16,34 +16,45 @@ export const Navbar: React.FC = () => {
     await MockAuthService.logout();
     logout();
     setMobileMenuOpen(false);
-    router.push('/');
+    router.push("/");
   };
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
   };
 
-  const isAdmin = user?.role === 'admin';
-  const dashboardLink = isAdmin ? '/admin' : '/dashboard';
+  const isAdmin = user?.role === "admin";
+  const dashboardLink = isAdmin ? "/admin" : "/dashboard";
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-32">
-          {/* Logo and Slogan Container */}
-          <div className="flex items-center space-x-6">
+          {/* Left side: Logo + Slogan */}
+          <div className="flex items-center space-x-4">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3" onClick={closeMobileMenu}>
-              <Image 
+            <Link
+              href="/"
+              className="flex items-center space-x-3"
+              onClick={closeMobileMenu}
+            >
+              <Image
                 src="/images/logo.png"
                 width={80}
-                height={80} 
-                alt='JAG FC LOGO'
+                height={80}
+                alt="JAG FC LOGO"
               />
             </Link>
 
-            {/* Phoenix Slogan - Hidden on mobile, visible on desktop */}
-            <div className="hidden lg:flex items-center border-l-2 border-primary-500 pl-6">
+            {/* Mobile Slogan */}
+            <div className="flex md:hidden items-center">
+              <p className="font-varsity font-bold text-sm text-primary-600 tracking-wide uppercase">
+                Rise. Compete. Conquer.
+              </p>
+            </div>
+
+            {/* Desktop Slogan */}
+            <div className="hidden md:flex items-center border-l-2 border-primary-500 pl-6">
               <p className="font-varsity font-bold text-xl text-primary-600 tracking-wider uppercase">
                 Rise. Compete. Conquer.
               </p>
@@ -52,17 +63,26 @@ export const Navbar: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 font-varsity">
-            <Link href="/" className="text-gray-700 hover:text-primary-600 font-semibold transition-colors">
+            <Link
+              href="/"
+              className="text-gray-700 hover:text-primary-600 font-semibold transition-colors"
+            >
               Home
             </Link>
-            <Link href="/packages" className="text-gray-700 hover:text-primary-600 font-semibold transition-colors">
+            <Link
+              href="/packages"
+              className="text-gray-700 hover:text-primary-600 font-semibold transition-colors"
+            >
               Programs
             </Link>
-            
+
             {user ? (
               <>
-                <Link href={dashboardLink} className="text-gray-700 hover:text-primary-600 font-semibold transition-colors">
-                  {isAdmin ? 'Admin' : 'Dashboard'}
+                <Link
+                  href={dashboardLink}
+                  className="text-gray-700 hover:text-primary-600 font-semibold transition-colors"
+                >
+                  {isAdmin ? "Admin" : "Dashboard"}
                 </Link>
                 <button
                   onClick={handleLogout}
@@ -88,12 +108,32 @@ export const Navbar: React.FC = () => {
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
-              <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-6 h-6 text-primary-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             ) : (
-              <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="w-6 h-6 text-primary-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             )}
           </button>
@@ -104,29 +144,29 @@ export const Navbar: React.FC = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-gray-50 border-t border-gray-200 shadow-lg">
           <div className="px-4 py-4 space-y-3">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               onClick={closeMobileMenu}
               className="block text-gray-700 hover:text-primary-600 font-semibold py-2 px-3 rounded-lg hover:bg-white transition-colors"
             >
               Home
             </Link>
-            <Link 
-              href="/packages" 
+            <Link
+              href="/packages"
               onClick={closeMobileMenu}
               className="block text-gray-700 hover:text-primary-600 font-semibold py-2 px-3 rounded-lg hover:bg-white transition-colors"
             >
               Programs
             </Link>
-            
+
             {user ? (
               <>
-                <Link 
+                <Link
                   href={dashboardLink}
                   onClick={closeMobileMenu}
                   className="block text-gray-700 hover:text-primary-600 font-semibold py-2 px-3 rounded-lg hover:bg-white transition-colors"
                 >
-                  {isAdmin ? 'Admin Dashboard' : 'Dashboard'}
+                  {isAdmin ? "Admin Dashboard" : "Dashboard"}
                 </Link>
                 <button
                   onClick={handleLogout}
