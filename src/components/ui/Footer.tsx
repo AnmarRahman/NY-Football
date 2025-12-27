@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About */}
           <div>
-            <Image src="/logo.png"
+            <Image src="/images/logo.png"
                         width={50}
                         height={50} 
                         alt='JAG FC LOGO'/>

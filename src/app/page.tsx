@@ -11,7 +11,7 @@ export default function HomePage() {
     <div className="animate-fadeIn">
       {/* Hero Section */}
       <section 
-        className="relative bg-cover bg-center text-white " 
+        className="relative bg-cover bg-center text-white font-varsity " 
         style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=2070&auto=format&fit=crop")',
           minHeight: 'calc(100vh - 80px)'
@@ -21,7 +21,7 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center" style={{ minHeight: 'calc(100vh - 80px)' }}>
           <div className="text-center max-w-4xl mx-auto py-20">
             {/* <div className="mb-6 inline-block">
-              <Image src="/logo.png"
+              <Image src="/images/logo.png"
                           width={120}
                           height={120} 
                           alt='JAG FC LOGO'/>
@@ -49,7 +49,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white font-varsity">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-black mb-4 text-gray-900">
             Welcome to <span className="text-primary-600">JAG FC</span>
@@ -101,7 +101,7 @@ export default function HomePage() {
       </section>
 
       {/* Team Gallery */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 font-varsity">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-black mb-4 text-gray-900">
@@ -113,7 +113,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="relative overflow-hidden rounded-xl shadow-lg border-2 border-primary-200 hover:border-primary-500 transition-all">
-              <div className="aspect-video bg-gray-200 bg-[url('/image1.jpg')] bg-cover relative">
+              <div className="aspect-video bg-gray-200 bg-[url('/images/image1.jpg')] bg-cover relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 ">
                   <p className="text-white font-bold text-lg">Indoor Training Excellence</p>
@@ -123,7 +123,7 @@ export default function HomePage() {
             </div>
 
             <div className="relative overflow-hidden rounded-xl shadow-lg border-2 border-accent-200 hover:border-accent-500 transition-all">
-              <div className="aspect-video bg-gray-200 bg-[url('/image2.jpg')] bg-cover relative">
+              <div className="aspect-video bg-gray-200 bg-[url('/images/image2.jpg')] bg-cover relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <p className="text-white font-bold text-lg">Tournament Champions</p>
@@ -133,7 +133,7 @@ export default function HomePage() {
             </div>
 
             <div className="relative overflow-hidden rounded-xl shadow-lg border-2 border-secondary-200 hover:border-secondary-500 transition-all">
-              <div className="aspect-video bg-gray-200 bg-[url('/image3.jpg')] bg-cover relative">
+              <div className="aspect-video bg-gray-200 bg-[url('/images/image3.jpg')] bg-cover relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <p className="text-white font-bold text-lg">Game Day Ready</p>
@@ -146,7 +146,7 @@ export default function HomePage() {
       </section>
 
       {/* Our Philosophy */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white font-varsity">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -187,7 +187,7 @@ export default function HomePage() {
       </section>
 
       {/* Age Groups */}
-      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 font-varsity">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-black mb-4 text-gray-900">
             Programs for <span className="text-primary-600">Every Age</span>
@@ -224,7 +224,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white font-varsity">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-black text-center mb-12 text-gray-900">
             What <span className="text-primary-600">Families Say</span>
@@ -280,7 +280,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 font-varsity">
         <Card className="bg-gradient-to-r from-primary-500 to-accent-500 text-white text-center shadow-xl" padding="lg">
           <div className="text-7xl mb-4">🦅</div>
           <h2 className="text-4xl md:text-5xl font-black mb-4">Ready to Rise?</h2>
