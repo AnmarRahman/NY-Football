@@ -76,9 +76,10 @@ export default function HomePage() {
         <div className="grid md:grid-cols-3 gap-8">
           <Card hover padding="lg" className="bg-white border border-gray-200">
             <div className="text-center">
-              <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-4xl">🦅</span>
+              <div className="w-20 h-20 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-4xl">⚽</span>
               </div>
+
               <h3 className="text-2xl font-bold text-primary-600 mb-2">
                 Elite Coaching
               </h3>
@@ -91,7 +92,7 @@ export default function HomePage() {
 
           <Card hover padding="lg" className="bg-white border border-gray-200">
             <div className="text-center">
-              <div className="w-20 h-20 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-4xl">🏆</span>
               </div>
               <h3 className="text-2xl font-bold text-accent-600 mb-2">
@@ -103,11 +104,15 @@ export default function HomePage() {
               </p>
             </div>
           </Card>
-
           <Card hover padding="lg" className="bg-white border border-gray-200">
             <div className="text-center">
-              <div className="w-20 h-20 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-4xl">⚽</span>
+              <div className="w-20 h-20 bg-gray-100 rounded-full border-2 flex items-center justify-center mx-auto mb-4">
+                <Image
+                  src="/images/phoenix-icon.png"
+                  alt="Phoenix"
+                  width={48}
+                  height={48}
+                />
               </div>
               <h3 className="text-2xl font-bold text-secondary-600 mb-2">
                 Phoenix Mentality
