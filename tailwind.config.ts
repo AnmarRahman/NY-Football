@@ -58,6 +58,9 @@ const config: Config = {
           900: "#1a1a1a",
         },
       },
+      fontFamily: {
+        varsity: ['var(--font-varsity)']
+      }
     },
   },
   plugins: [],

@@ -82,10 +82,10 @@ export default function AuthPage() {
       <div className="max-w-md mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">
-            {isLogin ? 'Welcome Back!' : 'Join NY Future Stars'}
+          <h1 className="text-4xl font-bold text-gray-900 mb-2 font-varsity">
+            {isLogin ? 'Welcome Back!' : 'Join JAG FC'}
           </h1>
-          <p className="text-gray-600">
+          <p className="text-gray-600 font-varsity">
             {isLogin 
               ? 'Sign in to access your account' 
               : 'Create an account to get started'
